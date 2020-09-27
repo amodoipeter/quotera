@@ -1,0 +1,9 @@
+<div>
+    
+    <p>The author of the quote is {{quote.author}}</p>
+    <p>The quote was submitted by {{ quote.submittedBy }} on {{quote.dateCreation|date}}
+        <br><button class="btn btn-primary" (click)="quote.upvotes=quote.upvotes+1" class="">upvotes {{quote.upvotes}}</button>
+        <button class="btn btn-primary" (click)="quote.downvotes=quote.downvotes+1" class="">downvotes {{quote.downvotes}}</button>
+        <br><br>
+    </p><button class="btn btn-outline-danger" (click)= "quoteDelete(true)">Delete</button>
+  </div>

@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-6">
+          <h1>MY QUOTES</h1>
+          <hr>
+  
+          <div *ngFor='let quote of quotes;let i = index'>
+              <li>{{quote.name}}</li>
+              <button class="btm btn-primary btn-sm" (click)='toggleDetails(i)'>Toggle Details</button>
+              <app-quote-details *ngIf='quote.showDescription' [quote]='quote' (isDelete)='deleteQuote($event,i)'></app-quote-details>
+            </div>
+        
+      </div>
+         <div class="col-md-6">
+          <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+     </div>
+    </div>
+    </div>
+  
+        
+          
+      
+   
+   

@@ -1,0 +1,40 @@
+<div class="container-fluid">
+    <h2 class="text-center">ADD A QUOTE</h2>
+    <hr>
+    <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
+     <div class="form-group">
+
+         <label for="name">Quote</label>
+        <textarea class="form-control" id="description" rows="4" required id="name" [(ngModel)]="newQuote.name" name="name" #name='ngModel'></textarea>
+        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                    <p>{{ newQuote.name }}</p>
+                <p>Name is required</p>
+              </div> 
+    </div>
+        <div class="form-group">
+
+            <label for="author">Author</label>
+            <input type="text" required class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author='ngModel' >
+            
+            <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+                    <p>Author is required</p>
+                  </div> 
+        </div>
+
+        <div class="form-group">
+            <label for="submittedBy">Submitted By</label>
+            <input type='text' id="submit" required class="form-control" [(ngModel)]="newQuote.submittedBy" name="submittedBy" #submittedBy='ngModel'>
+            <div [hidden]="submittedBy.valid || submittedBy.pristine" class="alert alert-danger">
+                    <p>Person who submitted is required</p>
+                  </div> 
+        </div>
+        <div class="form-group">
+                <label for="dt">Date</label>
+                <input type='date' id="dt" required class="form-control" [(ngModel)]="newQuote.dateCreation" name="dateCreation" #dateCreation='ngModel'>
+                <div [hidden]="dateCreation.valid || dateCreation.pristine" class="alert alert-danger">
+                        <p>Date it was created</p>
+                      </div> 
+                      <button type="submit" class="btn btn-primary">Add Quote</button>
+        </div>
+    </form>
+  </div>
