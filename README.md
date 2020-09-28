@@ -1,3 +1,19 @@
+# Quotera
+A web application that allows the user to create, delete, upvote, and downvote a quote
+
+# Author
+amodoipeter
+
+
+## Technologies Used
+Typescript
+JavaScript
+HTML
+Bootstrap
+Figma link (https://www.figma.com/file/8bvMYvOesHxmHopNXItI3Q/Untitled?node-id=0%3A1)
+
+##### Link to Live Site : [https://amodoipeter.github.io/quotera/]
+
 # QuotesApplication
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.2.
